@@ -4,10 +4,11 @@
 #
 Name     : mvn-ee4j
 Version  : 1.0.4
-Release  : 1
+Release  : 2
 URL      : https://github.com/eclipse-ee4j/ee4j/archive/1.0.4.tar.gz
 Source0  : https://github.com/eclipse-ee4j/ee4j/archive/1.0.4.tar.gz
 Source1  : https://repo1.maven.org/maven2/org/eclipse/ee4j/project/1.0.4/project-1.0.4.pom
+Source2  : https://repo1.maven.org/maven2/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : EPL-2.0 GPL-2.0
@@ -36,6 +37,9 @@ data components for the mvn-ee4j package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/ee4j/project/1.0.4
 cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/ee4j/project/1.0.4/project-1.0.4.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/eclipse/ee4j/project/1.0.5
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom
+
 
 %files
 %defattr(-,root,root,-)
@@ -43,3 +47,4 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/eclipse/ee4j/projec
 %files data
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/org/eclipse/ee4j/project/1.0.4/project-1.0.4.pom
+/usr/share/java/.m2/repository/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom
